@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5G Bank | Sign Up</title>
+    <script src="https://kit.fontawesome.com/a8ea92a19a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="shortcut icon" href="assests/logo.png" type="image/x-icon">
+</head>
+<body>
+
+     <div class="formcontainer" id="formcontainer">
+    
+    <!-- LEFT PART -->
+    <div class="leftside">   
+        <form id="signupForm">
+            <div class="form-headings">
+                <img class="logoimg" src="assests/logo.png" alt="">
+                <h3>Creat Account</h3>
+            </div>
+
+        <div class="form-inputs">
+            <div class="formflex">
+                <label for="FullName">FullName</label>
+                <input placeholder="John Doe" type="text" required id="signupfullname">
+            </div>
+            <div class="formflex">
+                <label for="email">Email</label> <br>
+                <input type="email" placeholder="Enter your email" required id="email"> 
+            </div>
+            <div class="formflex">
+                <label for="phonenumber">Phone</label>
+                <input type="number" placeholder="123-456-7890" id="phonenumber">
+            </div>
+            <div class="formflex">
+                <label for="country">Country</label>
+                <input type="text" id="country" >              
+            </div>
+            <div class="formflex">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Enter Password" required name="security" id="password" minlength="8"> <br>
+            </div>
+            <div class="formflex">
+                <label for="confirmpassword">Confirm Password</label>
+                <input type="password" placeholder="Confirm Password" id="confirmpassword" name="security" required minlength="8">
+            </div>
+        </div>
+            
+
+            <a href="dashboard.html"><button class="signinbtn" id="signupbtn">Sign Up</button></a>
+
+            <div class="splitline">
+                <div></div>
+                <p> OR <p>
+                <div></div>
+            </div>
+            
+            <div class=" signinopt">
+                <ul>
+                    <a href=""><i class="fa-brands fa-google"></i>SignUp with Google</a>
+                    <a href=""><i class="fa-brands fa-facebook" style="color: rgb(15, 109, 184);"></i> SignUp with Apple</a>
+                </ul>
+            </div>
+
+  </form>
+        </div>
+        <div class="rightside">
+        </div>
+    </div>
+
+
+
+    <script src="signup.js"></script>
+</body>
+</html>

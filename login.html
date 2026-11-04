@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a8ea92a19a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="login.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="formcontainer" id="formcontainer">
+    
+    <!-- LEFT PART -->
+    <div class="leftside">   
+        <form  id="loginForm">
+            <div class="form-headings">
+                <img class="logoimg" src="assests/logo.png" alt="">
+                <h1>5GBank</h1>
+                <h3>Sign In</h3>
+            </div>
+
+            <div class="form-inputs">
+                <label for="email">Email</label> <br>
+                <input type="email" placeholder="Enter your email" required title="email" id="loginemail"> <br>
+
+                <label for="password">Password</label>
+                <input type="password" placeholder="Enter your password" required title="Email" id="loginpassword"> <br> 
+            </div>
+            
+        <div class="formfeatures">
+            <div>
+            <label for="chechbox">Remember Me</label>
+            <input  type="checkbox" id="chechbox">
+            </div>
+            <div>
+            <a class="fgt-pass" href="#">Forgot Password?</a>
+            </div>
+        </div>
+
+            <button type="submit" class="signinbtn" id="loginbtn">Sign In</button>
+
+            <div class="splitline">
+                <div></div>
+                <p> OR <p>
+                <div></div>
+            </div>
+            
+            <div class=" signinopt">
+                <ul>
+                    <a href=""><i class="fa-brands fa-google"></i>Continue with Google</a>
+                    <a href=""><i class="fa-brands fa-facebook" style="color: rgb(15, 109, 184);"></i> Continue with Apple</a>
+                </ul>
+            </div>
+            <a href="signup.html" style="text-decoration: underline;">Don't have an Account?</a>
+  </form>
+        </div>
+        <div class="rightside">
+        </div>
+    </div>
+
+<script src="logins.js"></script>
+</body>
+

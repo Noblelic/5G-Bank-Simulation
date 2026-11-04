@@ -1,0 +1,156 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+
+/* ANCHORS TAG */
+a {
+    text-decoration: none;
+}
+
+
+/* BANKIST BRAND COLOURS */
+:root {
+  --primary: #450920;
+  --secondary: #a53860;
+  --accent: #da627d;
+  --background: #f9dbbd;
+  --white: #FFFFFF;
+  --text-dark: #090b0e;
+  --text-muted: #ffa5ab;
+  --border: #E2E8F0;
+}
+
+body {
+    background:linear-gradient(to top left, var(--background), var(--primary));
+    padding: 50px;
+}
+
+.logoimg {
+    width: 80px;
+    height: 35px;
+}
+
+.formcontainer {
+    background: var(--white);
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    width: 800px;
+    height: 500px;
+    gap: 0px;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-radius: 0.5rem 6rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+
+}
+
+form .form-headings{
+    justify-content: center;
+    display: grid;
+    text-align: center;
+}
+
+form {
+    gap: 10px;
+    display: grid;
+}
+
+form a {
+    text-align: center;
+}
+
+.rightside{
+    width:50%; 
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+    background-image: url(assests/5g\ banner.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.leftside {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+ 
+}
+
+
+.leftside input{
+    border: none;
+    outline: none;
+    background: var(--border);
+    border-radius: 0.5rem;
+    height: 30px;
+    width: 100%;
+    padding: 10px;
+}
+
+#chechbox {
+    height: 15px;
+    width: 20px;
+}
+
+.signinbtn {
+    padding: 6px 10px;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: none;
+    color: #da627d;
+    background: var(--primary);
+    
+}
+.signinopt ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.signinopt a {
+    border: 1px solid var(--primary);
+    border-radius: 1rem;
+    text-align: center;
+    display: block;
+}
+
+
+.splitline {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.splitline div{
+    width: 70%;
+    background-color: black;
+    height: 1px;
+}
+
+.fgt-pass {
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.formfeatures {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+

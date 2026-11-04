@@ -1,0 +1,414 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'poppins';
+}
+
+/* 5GBank BRAND COLOURS */
+:root {
+  --primary: #450920;
+  --secondary: #a53860;
+  --accent: #da627d;
+  --background: #f9dbbd;
+  --white: #FFFFFF;
+  --text-dark: #090b0e;
+  --text-muted: #ffa5ab;
+  --border: #E2E8F0;
+}
+.main {
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+    grid-template-rows: auto;
+    background: var(--background);
+    gap: 20px;
+    padding: 5px 15px ;
+}
+
+
+/* SIDEBAR */
+aside {
+    background: var(--primary);
+    border-radius: 1rem;
+    gap: 30px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+aside h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+    color: var(--text-muted);
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+aside ul li a {
+    padding: 10px;;
+    color: var(--background);
+    display: block;
+}
+
+aside ul li a:hover {
+    padding: 10px;
+    color: var(--primary);
+    display: block;
+    padding: 10px;
+    background: var(--background);
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
+
+aside ul {
+    gap: 20px;
+    display: grid;
+}
+
+aside img {
+    width: 100px;
+    height: 50px;
+}
+
+.Logout{
+    display: flex;
+    justify-content: center;
+}
+.Logout a {
+    color: white;
+}
+
+/* DASHBOARD HEADER */
+.dashboard .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 100px;    
+}
+
+.rightside {
+    display: flex;
+    gap: 10px;
+}
+
+.colormode {
+    background-color: rgba(226, 232, 240);
+    display: flex;
+    width: fit-content;
+    border-radius: 50px;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    gap: 10px;
+    padding: 0px 4px;
+}
+
+.lightmode {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--white);
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+
+
+.darkmode {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.circles {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--white);
+    box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.2);
+    font-size: 25px;
+}
+
+.profile {
+    background-image: url(assests/user-male-circle.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#search {
+    outline: none;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.5rem;
+    width: stretch ;
+}
+
+
+/* CARD SECTION */
+.dashboard-grid {
+    gap: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  
+}
+
+.card-section{
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 20px;
+
+    /* background-image: url(assests/5g\ banner.png); */
+}
+
+.card-section .atmcard {
+    height: auto;
+    width: stretch;
+    border-radius: 1rem;
+    background-image: url(assests/atm\ background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 200px;
+}
+
+
+.Balancearea {
+    display: grid;
+    gap: 10px;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.balanceprivacy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.transferbtn{
+    padding: 10px 15px;
+    background: linear-gradient(to bottom right, var(--primary)70%, var(--accent) 95%);
+    border-radius: 0.5rem;
+    color: var(--background);
+    font-size: 1rem;
+}
+
+.requestbtn {
+    padding: 10px 15px;
+    background: var(--background);
+    border-radius: 0.5rem;
+    color: var(--primary);
+    font-size: 1rem;
+    margin-right: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+}
+
+.balancestats {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.balanceflow{
+    display: flex;
+}
+.statscalc {
+    padding: 8px 5px;
+    background-color: rgba(9, 255, 0, 0.2);
+    border-radius: 50px;
+}
+
+#balanceactionbtn{
+    display: flex;
+    gap: 15px;
+}
+
+.transferbuttons {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+/* TRANSACTION HISTORY */
+
+.transactionhistory {
+    grid-column: 1;
+    grid-row: 2 / -1; 
+}
+
+.recent-transactions {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(69, 9, 32, 0.1);
+    font-size: 1.2rem;
+}
+.rtdetails {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 5px;
+    padding-top: 3px;
+}
+
+.transactionlogos{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color:var(--secondary);
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    color: var(--background);
+    font-size:15px ;
+}
+
+/* DEBIT */
+.debitnote {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+}
+
+
+.debitamount {
+    color: red;
+}
+
+/* CREDIT */
+.creditnote {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+}
+
+.creditamount {
+    color: green;
+}
+
+
+
+
+
+
+/* STATISTICS CARD */
+.statistics-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.statstext {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dots {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #450920;
+}
+
+.dots2 {
+     width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.statsnav2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.statsperiod {
+    background-color: rgba(218, 98, 125, 0.3);
+    border-radius: 50px;
+}
+
+.statsperiod button:first-child {
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    padding: 5px;
+    background: rgba(218, 98, 125, 0.5);
+}
+
+.statsalltime, .statsyearly {
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    padding: 5px;
+    background: none;
+}
+
+
+/* PAYMENT SCHEDULE */
+.payschedule{
+    display: grid;
+    gap: -1;
+}
+
+.schudules{
+    display: flex;
+    justify-content: space-between;
+}
+
+.schedulelist{
+    display: grid;
+}
+.schedulerow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#schel{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+
+#maincard {
+    background-color: #fdead8;
+    border-radius: 1rem;
+    color: var(--primary);
+    padding: 10px ;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+}
+
