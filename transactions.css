@@ -1,0 +1,196 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* GENERAL STYLING */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'poppins';
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* 5GBank BRAND COLOURS */
+:root {
+  --primary: #450920;
+  --secondary: #a53860;
+  --accent: #da627d;
+  --background: #f9dbbd;
+  --white: #FFFFFF;
+  --text-dark: #090b0e;
+  --text-muted: #ffa5ab;
+  --border: #E2E8F0;
+}
+
+
+.main {
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 5px 15px ;
+}
+
+/* SIDEBAR */
+aside {
+    background: var(--primary);
+    border-radius: 1rem;
+    gap: 30px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+aside h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+    color: var(--text-muted);
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+aside ul li a {
+    padding: 10px;;
+    color: var(--background);
+    display: block;
+}
+
+aside ul li a:hover {
+    padding: 10px;
+    color: var(--primary);
+    display: block;
+    padding: 10px;
+    background: var(--background);
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
+
+aside ul {
+    gap: 20px;
+    display: grid;
+}
+
+aside img {
+    width: 100px;
+    height: 50px;
+}
+
+.Logout{
+    display: flex;
+    justify-content: center;
+}
+.Logout a {
+    color: white;
+}
+
+
+
+
+
+/* MAIN */
+
+.transactionContainer {
+    display: grid;
+    padding: 30px 55px;
+}
+
+.transaction-header {
+    display: grid;
+    gap: 10px;
+    border-bottom: 1px solid black;
+}
+
+.transaction-nav {
+    display: grid;
+}
+
+.navrow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navprofile {
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--white);
+    box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.2);
+}
+
+#userlogo {
+    background-image: url(assests/user-male-circle.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#navright {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+}
+
+
+.transactionfeatures {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.boardheadlines {
+    display: grid;
+    border: 1px solid black;
+    border-radius: 1rem;
+    width: auto;
+}
+
+.listheadlines {
+    display: flex;
+    padding: 0px 50px;
+    
+}
+
+.listheadlines div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.transactionlist {
+    display: grid;
+    align-items: center;
+    padding: 0px 20px;
+    gap: 20px;
+    
+}
+
+.movements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.movements  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#type {
+    display: flex;
+}
+
+#date {
+    display: grid;
+}

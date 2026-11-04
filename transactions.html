@@ -3,30 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>5GBank | Transactions</title>
+    <script src="https://kit.fontawesome.com/a8ea92a19a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="transactions.css">
 </head>
 <body>
     
+
+    <!-- LAYOUT -->
+     <!-- MAIN -->
+    <section class="main">
+
+
+    <!-- SIDE BAR -->
+    <aside>
+    <img src="assests/logo.png" alt="">
+    <ul>
+        <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+        <li><a href=""><i class="fa-solid fa-right-left"></i> Transactions</a></li>
+        <li><a href=""><i class="fa-solid fa-chart-simple"></i> Analytics</a></li>
+        <li><a href=""><i class="fa-solid fa-credit-card"></i> Cards</a></li>
+        <li><a href=""><i class="fa-solid fa-vault"></i> Savings</a></li>
+        <li><a href=""><i class="fa-solid fa-gear"></i> Settings</a></li>
+        <li><a href=""><i class="fa-solid fa-circle-question"></i> Help</a></li>
+    </ul>
+    <hr>
+    <div class="Logout">
+        <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </div>
+    </aside>
+
+
     <!-- TRANSACTION  CONTAINER -->
     <div class="transactionContainer">
-       <div class="heading">
-            <h1>Transactions</h1>
-       </div>
 
+    <div class="transaction-header">
+    
+    <!-- NavRow 1 -->
+        <div class="transaction-nav">
+        <div class="navrow">
+            <div class="heading">
+                <h1>Transactions</h1>
+            </div>
+
+            <div id="navright">
+                <i class="fa-solid fa-magnifying-glass" style="color: #450920;"></i>
+
+                <i class="fa-solid fa-bell" style="color: #450920;"></i>
+
+                <div class="navprofile" id="userlogo"></div>
+            </div>
+        </div>
+
+
+        <!-- NavRow 2 -->
+         <div class="navrow">
         <div>
-            <input type="search" placeholder="Search for transaction">
-       </div>
+                <input type="search" placeholder="Search transactions ">
+        </div>
+        <div> 
+                
+                <button>Filter</button>
+                <button>Exports</button>
+                
+        </div>
+        </div>
+        </div>
 
 
-       <!-- Filtering and Exports -->
-       <div>
-            <button>Filter</button>
-            <button>Exports</button>
-       </div>
-
+    
        
-       <!-- TRANSACTION FEATURE -->
-       <div>
+    <!-- TRANSACTION FEATURE -->
+    <div class="transactionfeatures">
+       <div class="dropdown type">
             <p>Type</p>
             <select name="" id="">
                 <option value="">All Transactions</option>
@@ -35,36 +84,257 @@
             </select>
        </div>
 
+       <div class="dropdown category">
+            <p>Category</p>
+            <select name="" id="">
+                <option value="">Sent</option>
+                <option value="">Pending</option>
+                <option value="">Reversed</option>
+            </select>
+       </div>
+
+       <div class="dropdown date">
+            <p>Date</p>
+            <select name="" id="">
+                <option value="">Today</option>
+                <option value="">Yesterday </option>
+                <option value="">Last 30 Days</option>
+                <option value="">Input Date</option>
+            </select>
+       </div>
+    </div>
 
 
 
 
 
-       <!-- CONTAINER LABLE -->
-       <div class="containerLabel">
+    <!-- CONTAINER LABLE -->
+    <div class="boardheadlines">
+        <!-- list headlines -->
+    <div class="listheadlines">  
+        <div> 
             <h3>Transaction</h3>
             <h3>Date</h3>
-            <h3>LEF354FW53E3R3MV</h3>
+            <h3>ID</h3>
             <h3>Amount</h3>
             <h3>Status</h3>
             <h3>Details</h3>
        </div>
+    </div>
+    </div>
 
-       <!-- TRANSACTIONS INPUTS -->
-        <div>
-            <i></i>
-            <h4>Withdraw</h4>
 
-            <div>
+    <div class="transactionlist">
+        
+        <!-- transactionlist -->
+        <div class="movements">
+            <div id="type">
+                <i><i class="fa-solid fa-paper-plane" style="color: #450920;"></i></i>
+                <h4>Withdrawal</h4>
+            </div>
+
+            <div id="date">
                 <h4>Jan 15, 2026</h4>
                 <small>08:41 PM</small>
             </div>
 
+            <div id="id">
+                <p>WDR5E3MWKDF</p>
+            </div>
+
+            <div id="amount">
+                <h3>$742</h3>
+            </div>
+
+            <div id="status">
+                <h3>Successful</h3>
+            </div>
+
+            <div id="details">
+                <button>Details</button>
+            </div>
+
         </div>
+
+
+        <div class="movements">
+            <div id="type">
+                <i><i class="fa-solid fa-paper-plane" style="color: #450920;"></i></i>
+                <h4>Withdrawal</h4>
+            </div>
+
+            <div id="date">
+                <h4>Jan 15, 2026</h4>
+                <small>08:41 PM</small>
+            </div>
+
+            <div id="id">
+                <p>WDR5E3MWKDF</p>
+            </div>
+
+            <div id="amount">
+                <h3>$742</h3>
+            </div>
+
+            <div id="status">
+                <h3>Successful</h3>
+            </div>
+
+            <div id="details">
+                <button>Details</button>
+            </div>
+
+        </div>
+
+
+        <div class="movements">
+            <div id="type">
+                <i><i class="fa-solid fa-paper-plane" style="color: #450920;"></i></i>
+                <h4>Withdrawal</h4>
+            </div>
+
+            <div id="date">
+                <h4>Jan 15, 2026</h4>
+                <small>08:41 PM</small>
+            </div>
+
+            <div id="id">
+                <p>WDR5E3MWKDF</p>
+            </div>
+
+            <div id="amount">
+                <h3>$742</h3>
+            </div>
+
+            <div id="status">
+                <h3>Successful</h3>
+            </div>
+
+            <div id="details">
+                <button>Details</button>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <div class="movements">
+            <div id="type">
+                <i><i class="fa-solid fa-paper-plane" style="color: #450920;"></i></i>
+                <h4>Withdrawal</h4>
+            </div>
+
+            <div id="date">
+                <h4>Jan 15, 2026</h4>
+                <small>08:41 PM</small>
+            </div>
+
+            <div id="id">
+                <p>WDR5E3MWKDF</p>
+            </div>
+
+            <div id="amount">
+                <h3>$742</h3>
+            </div>
+
+            <div id="status">
+                <h3>Successful</h3>
+            </div>
+
+            <div id="details">
+                <button>Details</button>
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="movements">
+            <div id="type">
+                <i><i class="fa-solid fa-paper-plane" style="color: #450920;"></i></i>
+                <h4>Withdrawal</h4>
+            </div>
+
+            <div id="date">
+                <h4>Jan 15, 2026</h4>
+                <small>08:41 PM</small>
+            </div>
+
+            <div id="id">
+                <p>WDR5E3MWKDF</p>
+            </div>
+
+            <div id="amount">
+                <h3>$742</h3>
+            </div>
+
+            <div id="status">
+                <h3>Successful</h3>
+            </div>
+
+            <div id="details">
+                <button>Details</button>
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="movements">
+            <div id="type">
+                <i><i class="fa-solid fa-paper-plane" style="color: #450920;"></i></i>
+                <h4>Withdrawal</h4>
+            </div>
+
+            <div id="date">
+                <h4>Jan 15, 2026</h4>
+                <small>08:41 PM</small>
+            </div>
+
+            <div id="id">
+                <p>WDR5E3MWKDF</p>
+            </div>
+
+            <div id="amount">
+                <h3>$742</h3>
+            </div>
+
+            <div id="status">
+                <h3>Successful</h3>
+            </div>
+
+            <div id="details">
+                <button>Details</button>
+            </div>
+
+        </div>
+        
+    
+    
+    
+    
     
     
     </div>
 
+    
+    </section>
+
+
+
+
+
+
+
+
+    
         
 
 </body>
