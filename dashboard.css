@@ -441,7 +441,7 @@ aside img {
 }
 .transfer-container {
     border-radius: 1rem;
-    color: var(--background);
+    color: var(--primary);
     padding: 20px;
     width: 500px;
     height:fit-content;
@@ -503,4 +503,224 @@ aside img {
     gap: 20px;
 }
 
-bankselection
+.otherbtns{
+ display: grid;
+ width: 30%;
+}
+
+.transfer-btns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.send  {
+    background: var(--primary);
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    color: var(--background);
+    width: 70%;
+}
+
+.cancel, .clear {
+    background: var(--primary);
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    color: var(--background);
+}
+
+.main,
+.dashboard,
+.dashboard-grid,
+.card-section {
+    min-width: 0;
+}
+
+.statisticscard {
+    width: 100%;
+    min-width: 0;
+}
+
+.chartcontainer,
+.chart {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+}
+
+.chartcontainer {
+    position: relative;
+    min-height: 180px;
+}
+
+.chart canvas {
+    display: block;
+}
+
+.transfer-container {
+    width: min(500px, calc(100vw - 32px));
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .main {
+        grid-template-columns: 10rem minmax(0, 1fr);
+        gap: 14px;
+        padding: 8px;
+    }
+
+    .dashboard .header {
+        gap: 20px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .dashboard-grid > * {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+@media (max-width: 760px) {
+    .main {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    aside {
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        gap: 12px;
+        justify-content: stretch;
+        padding: 10px;
+    }
+
+    aside img {
+        width: 64px;
+        height: auto;
+    }
+
+    aside h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    aside ul {
+        display: flex;
+        min-width: 0;
+        gap: 4px;
+        overflow-x: auto;
+    }
+
+    aside ul li {
+        flex: 0 0 auto;
+    }
+
+    aside ul li a {
+        padding: 8px;
+        white-space: nowrap;
+    }
+
+    aside hr {
+        display: none;
+    }
+
+    .dashboard .header {
+        gap: 12px;
+        padding: 8px 0;
+    }
+
+    #search {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .main {
+        gap: 10px;
+        padding: 6px;
+    }
+
+    aside {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: stretch;
+    }
+
+    aside img,
+    aside .Logout {
+        display: none;
+    }
+
+    .dashboard .header {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .rightside {
+        justify-content: flex-end;
+    }
+
+    .card-section {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+        padding: 12px;
+    }
+
+    .card-section .atmcard {
+        min-height: 180px;
+        min-width: 0;
+    }
+
+    .Balancearea {
+        padding: 8px 0;
+    }
+
+    #balanceactionbtn {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .transactionhistory,
+    .payschedule {
+        padding: 10px;
+    }
+
+    .recent-transactions {
+        gap: 8px;
+        font-size: 1rem;
+    }
+
+    .recent-transactions h3 {
+        font-size: 1rem;
+    }
+
+    .rtdetails,
+    .debitnote,
+    .creditnote {
+        min-width: 0;
+    }
+
+    #movesdrescription {
+        min-width: 0;
+    }
+
+    .schedulerow {
+        gap: 8px;
+    }
+
+    .schedulerow h2,
+    .schedulerow h3 {
+        font-size: 1rem;
+    }
+
+    .transfer-container {
+        padding: 16px;
+    }
+}
