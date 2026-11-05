@@ -41,7 +41,6 @@ signupbutton.addEventListener('click', function(e){
     }
 })
 
-console.log(users)
 
 
 
