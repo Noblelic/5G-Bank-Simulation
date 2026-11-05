@@ -179,6 +179,7 @@ aside img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .movements  div {
@@ -189,8 +190,34 @@ aside img {
 
 #type {
     display: flex;
+    gap: 20px;
 }
 
 #date {
     display: grid;
+}
+
+#status-successful  {
+    border-radius: 50px;
+    padding: 2px 6px;
+    background: rgba(0, 255, 21, 0.4);
+}
+
+#status-pending {
+    border-radius: 50px;
+    padding: 2px 6px;
+    background: rgba(255, 255, 0, 0.4)
+}
+
+#status-reversed {
+    border-radius: 50px;
+    padding: 2px 6px;
+    background: rgba(0, 255, 21, 0.4);
+}
+
+#details button {
+    border-radius: 50px;
+    padding: 10px;
+    border: none;
+    outline: none;
 }

@@ -6,9 +6,76 @@
     <title>5GBank | DashBoard</title>
     <script src="https://kit.fontawesome.com/a8ea92a19a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
+    <!-- TRANSFER POP -->
+    
+    <section class="transfer-container hidden">
+        <div class="trcontain-balance">
+            <h4>Available Balance</h4>
+            <h1>$20,000.00</h1>
+        </div>
+
+        <div class="recipient-details">
+            <div class="bankselection gap">
+                <h3>Select Bank</h3>
+                <div class="banklist">
+                    <select name="" id="">
+                        <Option>Zenith Bank</Option>
+                        <Option>Access  Bank</Option>
+                        <Option>Guaranty Trust Bank (GTBank)</Option>
+                        <Option>First Bank of Nigeria</Option>
+                        <Option>United Bank for Africa (UBA)</Option>
+                        <Option>OPay</Option>
+                        <Option>Moniepoint</Option>
+                        <Option>PalmPay</Option>
+                        <Option>Kuda Bank</Option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="accountinput gap">
+                <label for="accountnumber">Account Number</label>
+                <input type="tel" id="accountnumber" required>
+            </div>
+
+            <div>
+                Account Verified
+                
+            </div>
+
+            <div>
+                <h3>Transfer Amount</h3>
+                <input type="tel" required>
+            </div>
+
+            <div>
+                <h3>Description (Optional)</h3>
+                <input type="text">
+            </div>
+
+        </div>
+        
+        <button type="submit">Send</button>
+           
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="overlay"></section>
     <!-- MAIN -->
     <section class="main">
 
@@ -20,7 +87,7 @@
         <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
         <li><a href="transactions.html"><i class="fa-solid fa-right-left"></i> Transactions</a></li>
         <li><a href="dashboard.html"><i class="fa-solid fa-chart-simple"></i> Analytics</a></li>
-        <li><a href=""><i class="fa-solid fa-credit-card"></i> Cards</a></li>
+        <li><a href="statistics.html"><i class="fa-solid fa-credit-card"></i> Cards</a></li>
         <li><a href=""><i class="fa-solid fa-vault"></i> Savings</a></li>
         <li><a href=""><i class="fa-solid fa-gear"></i> Settings</a></li>
         <li><a href=""><i class="fa-solid fa-circle-question"></i> Help</a></li>
@@ -92,25 +159,12 @@
 
         <!-- statistics -->
         <div class="statistics" id="maincard">
-            <div class="statistics-nav">
-                <div class="statstext">
-                    <i class="fa-solid fa-chart-simple"></i>
-                    <h2>Statistics</h2>
-                </div>
-                <div class="statsperiod">
-                    <button>Monthly</button>
-                    <button class="statsyearly">Yearly</button>
-                    <button class="statsalltime">All Time</button>
-                </div>
-            </div>
-
-            <div class="statsnav2">
-                <div class="dots"></div>
-                <p>Income</p>
-
-                <div class="dots2"></div>
-                <p>Expenses</p>
-            </div>
+            <div class="chartcontainer">
+        <div class="chart" id="barchart">
+            <canvas id="myChart" width="300" height="300"></canvas>
+        </div>
+    </div>
+           <script src="statistics.js"></script>
         </div>
 
 
@@ -253,11 +307,7 @@
     </div>  
 
     </section>
-
-
-
-
-    </section>  
+    </section> 
 
   
 </body>
