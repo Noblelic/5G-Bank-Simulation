@@ -199,7 +199,7 @@ nav{
     border-radius: 1rem;
     gap: 10px;
     display: grid;
-    width: 35rem;
+    width: 100%;
 }
 
 #cards a {
@@ -247,6 +247,156 @@ nav{
 .highlights {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, auto))
+}
+
+@media (max-width: 900px) {
+    header {
+        padding: 6px 24px;
+    }
+
+    .logo h1 {
+        font-size: 2.4rem;
+    }
+
+    nav {
+        gap: 1rem;
+    }
+
+    .home h1 {
+        font-size: 4rem;
+        line-height: 1.1;
+        margin: 0 24px;
+    }
+
+    .home p {
+        margin-left: 40px;
+        font-size: 1.2rem;
+    }
+
+    .cardimg img {
+        width: min(26rem, 45vw);
+        height: auto;
+    }
+
+    .featuresContent {
+        padding: 40px;
+    }
+
+    .about {
+        padding: 30px 40px;
+    }
+
+    .aboutcard {
+        gap: 24px;
+    }
+
+    .aboutcard img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    header {
+        padding: 6px 16px;
+        background: var(--primary);
+    }
+
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+
+    .logo img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .accessbtns {
+        gap: 8px;
+    }
+
+    .login-btn,
+    .accessbtns .signup-btn {
+        width: 4.5rem;
+        height: 2rem;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+        padding: 4px 0 6px;
+        font-size: 0.85rem;
+    }
+
+    .home {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        height: auto;
+        min-height: 0;
+        padding: 140px 20px 32px;
+    }
+
+    .home h1 {
+        font-size: 2.5rem;
+        line-height: 1.12;
+        margin: 0;
+    }
+
+    .home p {
+        margin: 16px 0 0;
+        font-size: 1rem;
+    }
+
+    .home p br {
+        display: none;
+    }
+
+    #singupbtn {
+        width: min(100%, 18rem);
+        height: 3.25rem;
+        margin: 18px 0 0;
+        font-size: 1.1rem;
+    }
+
+    .cardimg img {
+        display: block;
+        float: none;
+        position: static;
+        width: min(100%, 28rem);
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .featuresContent {
+        padding: 32px 20px;
+    }
+
+    .features-headings h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .cards {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .about {
+        padding: 24px 20px;
+    }
+
+    .aboutcard {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .highlights {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 12px;
+    }
 }
 
 

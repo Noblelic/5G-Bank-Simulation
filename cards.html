@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5G BANK Luxury Virtual Card</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Share+Tech+Mono&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom Color Palette Variables */
+        :root {
+            --primary: #450920;
+            --secondary: #a53860;
+            --accent: #da627d;
+            --background: #f9dbbd;
+            --white: #FFFFFF;
+            --text-dark: #090b0e;
+            --text-muted: #ffa5ab;
+            --border: #E2E8F0;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--background);
+            color: var(--text-dark);
+            background-image: 
+                radial-gradient(at 10% 10%, rgba(165, 56, 96, 0.12) 0px, transparent 50%),
+                radial-gradient(at 90% 90%, rgba(69, 9, 32, 0.15) 0px, transparent 50%),
+                radial-gradient(at 50% 50%, rgba(218, 98, 125, 0.08) 0px, transparent 50%);
+        }
+
+        .mono-font {
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        .luxury-heading {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* 3D Card Container Perspective */
+        .card-container {
+            perspective: 1200px;
+        }
+
+        /* Luxury Card Styling */
+        .virtual-card {
+            background: linear-gradient(135deg, #2b0413 0%, #450920 45%, #a53860 80%, #3a061a 100%);
+            border: 1px solid rgba(255, 215, 0, 0.25);
+            box-shadow: 
+                0 25px 50px -12px rgba(69, 9, 32, 0.45),
+                0 0 35px 2px rgba(218, 98, 125, 0.25),
+                inset 0 1px 2px 0 rgba(255, 255, 255, 0.3);
+            transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+            transform-style: preserve-3d;
+        }
+
+        /* Dynamic Glow Behind Card */
+        .card-glow {
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(115deg, #a53860 0%, #da627d 40%, #ffd700 70%, #450920 100%);
+            border-radius: 1.25rem;
+            z-index: -1;
+            opacity: 0.35;
+            filter: blur(14px);
+            transition: opacity 0.3s ease, filter 0.3s ease;
+        }
+
+        .card-container:hover .card-glow {
+            opacity: 0.65;
+            filter: blur(18px);
+        }
+
+        /* Glossy Light Sweep Overlay */
+        .light-sweep {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.12),
+                transparent
+            );
+            transform: skewX(-25deg);
+            pointer-events: none;
+            transition: left 0.75s ease;
+        }
+
+        .card-container:hover .light-sweep {
+            left: 150%;
+        }
+
+        /* Gold EMV Chip styling */
+        .metallic-chip {
+            background: linear-gradient(135deg, #f7d070 0%, #fff5c0 40%, #c4962c 70%, #825e12 100%);
+            box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.9), 0 2px 5px rgba(0,0,0,0.4);
+        }
+
+        /* Frozen Overlay State */
+        .frozen-overlay {
+            background: rgba(43, 4, 19, 0.82);
+            backdrop-filter: blur(8px);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .is-frozen .frozen-overlay {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Toast Animation */
+        #toast {
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-10">
+
+    <main class="w-full max-w-md mx-auto flex flex-col items-center">
+
+        <!-- Header -->
+        <header class="text-center mb-6">
+            <h1 class="text-xs uppercase tracking-widest font-bold mb-1" style="color: var(--secondary);">Exclusive Digital Banking</h1>
+            <h2 class="text-2xl font-bold luxury-heading tracking-wide" style="color: var(--primary);">5G BANK Virtual Luxury Card</h2>
+        </header>
+
+        <!-- Card Container with Interactive 3D Effect -->
+        <div class="card-container w-full relative group cursor-pointer" id="cardContainer">
+            
+            <!-- Dynamic Glowing Aura -->
+            <div class="card-glow"></div>
+
+            <!-- Virtual Card -->
+            <div class="virtual-card relative w-full aspect-[1.586/1] rounded-2xl p-5 sm:p-7 flex flex-col justify-between overflow-hidden select-none text-white" id="virtualCard">
+                
+                <!-- Glossy Sweep Animation -->
+                <div class="light-sweep"></div>
+
+                <!-- Abstract Decorative Lines -->
+                <svg class="absolute -right-12 -bottom-12 w-80 h-80 opacity-15 pointer-events-none" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#da627d" d="M47.7,-57.2C60.2,-46.3,67.6,-29.3,69.8,-11.9C72.1,5.5,69.2,23.3,60.1,37.1C51,50.9,35.6,60.7,18.7,65.8C1.8,70.9,-16.7,71.3,-32.8,64.4C-48.9,57.5,-62.7,43.3,-69.1,26.2C-75.6,9.1,-74.8,-10.9,-66.4,-26.8C-58,-42.6,-42,-54.3,-26.2,-63.3C-10.4,-72.3,5.2,-78.6,20.8,-75C36.4,-71.4,35.2,-68,47.7,-57.2Z" transform="translate(100 100)" />
+                </svg>
+
+                <!-- Frozen Overlay -->
+                <div class="frozen-overlay absolute inset-0 z-20 flex flex-col items-center justify-center rounded-2xl">
+                    <div class="w-14 h-14 rounded-full bg-rose-500/20 border border-rose-300/40 flex items-center justify-center mb-2 shadow-lg">
+                        <i class="fa-solid fa-lock text-2xl text-pink-200 animate-pulse"></i>
+                    </div>
+                    <span class="text-sm font-semibold tracking-wider text-pink-100 uppercase">Card Frozen</span>
+                    <p class="text-xs text-rose-200/80 mt-1">Tap 'Unfreeze' below to activate</p>
+                </div>
+
+                <!-- CARD TOP: Brand & NFC -->
+                <div class="flex justify-between items-start z-10">
+                    <div class="flex items-center space-x-2.5">
+                        <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-amber-300 via-amber-400 to-amber-600 flex items-center justify-center font-black text-black text-sm shadow-md border border-amber-200">
+                            5G
+                        </div>
+                        <div>
+                            <span class="text-lg font-extrabold tracking-wider luxury-heading text-white block leading-none">5G BANK</span>
+                            <span class="text-[9px] uppercase tracking-widest font-semibold block mt-1" style="color: var(--text-muted);">Virtual Luxury</span>
+                        </div>
+                    </div>
+
+                    <!-- Contactless NFC Symbol -->
+                    <div class="text-amber-200 opacity-90">
+                        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                            <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                            <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                            <line x1="12" y1="20" x2="12.01" y2="20" stroke-width="3"></line>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- CARD MIDDLE: EMV Chip & Mask/Unmask Toggle -->
+                <div class="my-auto z-10 pt-2">
+                    <div class="flex justify-between items-center mb-3">
+                        <!-- Gold EMV Chip -->
+                        <div class="metallic-chip w-11 h-8 rounded-md relative overflow-hidden border border-amber-300/60 flex flex-col justify-between p-1">
+                            <div class="w-full h-[1px] bg-amber-950/40"></div>
+                            <div class="w-full h-[1px] bg-amber-950/40"></div>
+                            <div class="absolute inset-y-0 left-1/3 w-[1px] bg-amber-950/40"></div>
+                            <div class="absolute inset-y-0 right-1/3 w-[1px] bg-amber-950/40"></div>
+                        </div>
+
+                        <!-- Reveal Toggle Button -->
+                        <button id="toggleDetailsBtn" onclick="toggleCardDetails()" class="px-3 py-1 rounded-full bg-black/30 hover:bg-black/50 border border-white/20 text-xs flex items-center space-x-1.5 transition text-rose-100 hover:text-white">
+                            <i id="toggleIcon" class="fa-regular fa-eye text-amber-300"></i>
+                            <span id="toggleText">Show Details</span>
+                        </button>
+                    </div>
+
+                    <!-- Card Number Display -->
+                    <div class="mono-font text-lg sm:text-2xl font-bold tracking-widest text-slate-100 drop-shadow-md flex justify-between items-center" id="cardNumber">
+                        <span>••••</span>
+                        <span>••••</span>
+                        <span>••••</span>
+                        <span>1234</span>
+                    </div>
+                </div>
+
+                <!-- CARD BOTTOM: Holder Name, Expiry & Network -->
+                <div class="flex justify-between items-end z-10 pt-1">
+                    <div class="space-y-1">
+                        <div>
+                            <span class="text-[9px] uppercase tracking-wider font-medium block" style="color: var(--text-muted);">Card Holder</span>
+                            <span class="text-xs sm:text-sm font-semibold tracking-wide uppercase block text-white" id="cardHolder">SARAH M. ADEBAYO</span>
+                        </div>
+                        <div class="flex space-x-5">
+                            <div>
+                                <span class="text-[8px] uppercase tracking-wider font-medium block" style="color: var(--text-muted);">Valid Thru</span>
+                                <span class="mono-font text-xs font-semibold text-white block" id="cardExp">10/28</span>
+                            </div>
+                            <div>
+                                <span class="text-[8px] uppercase tracking-wider font-medium block" style="color: var(--text-muted);">CVV</span>
+                                <span class="mono-font text-xs font-semibold text-white block" id="cardCvv">•••</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Network Logo -->
+                    <div class="flex items-center">
+                        <div class="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-rose-600/90 -mr-3 sm:-mr-4 shadow-sm border border-white/10"></div>
+                        <div class="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-amber-400/90 shadow-sm border border-white/10"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ACTION BUTTONS -->
+        <section class="w-full mt-6 grid grid-cols-3 gap-3">
+            <!-- Copy Info -->
+            <button onclick="copyCardDetails()" class="p-3.5 rounded-xl bg-white/70 hover:bg-white border border-rose-900/10 flex flex-col items-center justify-center text-center transition group shadow-sm hover:shadow">
+                <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-1.5 transition" style="background-color: rgba(165, 56, 96, 0.1); color: var(--secondary);">
+                    <i class="fa-regular fa-copy text-sm"></i>
+                </div>
+                <span class="text-xs font-semibold" style="color: var(--primary);">Copy Info</span>
+            </button>
+
+            <!-- Freeze / Unfreeze -->
+            <button id="freezeBtn" onclick="toggleFreezeCard()" class="p-3.5 rounded-xl bg-white/70 hover:bg-white border border-rose-900/10 flex flex-col items-center justify-center text-center transition group shadow-sm hover:shadow">
+                <div id="freezeIconContainer" class="w-9 h-9 rounded-lg flex items-center justify-center mb-1.5 transition" style="background-color: rgba(165, 56, 96, 0.1); color: var(--secondary);">
+                    <i id="freezeIcon" class="fa-regular fa-snowflake text-sm"></i>
+                </div>
+                <span id="freezeBtnText" class="text-xs font-semibold" style="color: var(--primary);">Freeze</span>
+            </button>
+
+            <!-- Set Limit -->
+            <button onclick="openLimitModal()" class="p-3.5 rounded-xl bg-white/70 hover:bg-white border border-rose-900/10 flex flex-col items-center justify-center text-center transition group shadow-sm hover:shadow">
+                <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-1.5 transition" style="background-color: rgba(165, 56, 96, 0.1); color: var(--secondary);">
+                    <i class="fa-solid fa-sliders text-sm"></i>
+                </div>
+                <span class="text-xs font-semibold" style="color: var(--primary);">Set Limit</span>
+            </button>
+        </section>
+
+        <!-- Spending Limit Tracker -->
+        <div class="w-full mt-4 p-4 rounded-xl bg-white/60 border border-rose-900/10 shadow-sm">
+            <div class="flex justify-between items-center text-xs mb-2">
+                <span class="font-medium" style="color: var(--primary);">Monthly Spending Limit</span>
+                <span class="font-bold" style="color: var(--primary);" id="limitDisplay">$2,500 / $5,000</span>
+            </div>
+            <div class="w-full h-2.5 rounded-full overflow-hidden bg-rose-900/10">
+                <div id="limitProgressBar" class="h-full rounded-full w-1/2 transition-all duration-500" style="background: linear-gradient(90deg, var(--secondary), var(--accent));"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 translate-y-20 opacity-0 text-white border border-rose-300/30 px-5 py-3 rounded-full shadow-2xl flex items-center space-x-2.5 z-50 pointer-events-none" style="background-color: var(--primary);">
+        <div class="w-2 h-2 rounded-full bg-amber-300 animate-ping"></div>
+        <span id="toastMsg" class="text-xs font-medium">Card number copied to clipboard!</span>
+    </div>
+
+    <!-- SET LIMIT MODAL -->
+    <div id="limitModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white border border-rose-900/10 w-full max-w-sm rounded-2xl p-6 shadow-2xl">
+            <h3 class="text-lg font-bold mb-1 luxury-heading" style="color: var(--primary);">Set Spending Limit</h3>
+            <p class="text-xs text-slate-500 mb-4">Adjust monthly virtual card limit for enhanced security.</p>
+            
+            <label class="text-xs font-semibold block mb-2" style="color: var(--primary);">New Monthly Limit ($)</label>
+            <input type="number" id="limitInput" value="5000" min="500" max="25000" step="500" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-rose-500 mb-5">
+            
+            <div class="flex space-x-3">
+                <button onclick="closeLimitModal()" class="flex-1 py-2.5 rounded-xl border border-slate-300 text-slate-700 text-xs font-semibold hover:bg-slate-100 transition">Cancel</button>
+                <button onclick="saveLimit()" class="flex-1 py-2.5 rounded-xl text-white text-xs font-semibold hover:opacity-95 transition shadow-sm" style="background-color: var(--primary);">Save Limit</button>
+            </div>
+        </div>
+    </div>
+
+   <script src="cards.js"></script>
+</body>
+</html>

@@ -10,72 +10,7 @@
 </head>
 <body>
 
-    <!-- TRANSFER POP -->
-    
-    <section class="transfer-container hidden">
-        <div class="trcontain-balance">
-            <h4>Available Balance</h4>
-            <h1>$20,000.00</h1>
-        </div>
-
-        <div class="recipient-details">
-            <div class="bankselection gap">
-                <h3>Select Bank</h3>
-                <div class="banklist">
-                    <select name="" id="">
-                        <Option>Zenith Bank</Option>
-                        <Option>Access  Bank</Option>
-                        <Option>Guaranty Trust Bank (GTBank)</Option>
-                        <Option>First Bank of Nigeria</Option>
-                        <Option>United Bank for Africa (UBA)</Option>
-                        <Option>OPay</Option>
-                        <Option>Moniepoint</Option>
-                        <Option>PalmPay</Option>
-                        <Option>Kuda Bank</Option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="accountinput gap">
-                <label for="accountnumber">Account Number</label>
-                <input type="tel" id="accountnumber" required>
-            </div>
-
-            <div>
-                Account Verified
-                
-            </div>
-
-            <div>
-                <h3>Transfer Amount</h3>
-                <input type="tel" required>
-            </div>
-
-            <div>
-                <h3>Description (Optional)</h3>
-                <input type="text">
-            </div>
-
-        </div>
-        
-        <button type="submit">Send</button>
-           
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section class="overlay"></section>
+    <!-- <section class="overlay"></section> -->
     <!-- MAIN -->
     <section class="main">
 
@@ -86,8 +21,8 @@
     <ul>
         <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
         <li><a href="transactions.html"><i class="fa-solid fa-right-left"></i> Transactions</a></li>
-        <li><a href="dashboard.html"><i class="fa-solid fa-chart-simple"></i> Analytics</a></li>
-        <li><a href="statistics.html"><i class="fa-solid fa-credit-card"></i> Cards</a></li>
+        <li><a href="statistics.html"><i class="fa-solid fa-chart-simple"></i> Analytics</a></li>
+        <li><a href=""><i class="fa-solid fa-credit-card"></i> Cards</a></li>
         <li><a href=""><i class="fa-solid fa-vault"></i> Savings</a></li>
         <li><a href=""><i class="fa-solid fa-gear"></i> Settings</a></li>
         <li><a href=""><i class="fa-solid fa-circle-question"></i> Help</a></li>
@@ -158,10 +93,10 @@
 
 
         <!-- statistics -->
-        <div class="statistics" id="maincard">
+        <div class="statisticscard" id="maincard">
             <div class="chartcontainer">
         <div class="chart" id="barchart">
-            <canvas id="myChart" width="300" height="300"></canvas>
+            <canvas id="myChart" width="10" height="180"></canvas>
         </div>
     </div>
            <script src="statistics.js"></script>
@@ -191,7 +126,7 @@
         <div class="transactionlogos">
             <i class="fa-solid fa-paper-plane"></i>
         </div>            
-        <div>
+        <div id="movesdrescription">
             <h4>Sent Money</h4>
             <small>Today, 9:15AMM</small>
         </div>
@@ -241,19 +176,7 @@
     
     </div>
 
-            <div class="expenses" id="maincard">
-                <div class="recent-transactions">
-        <div class="rtdetails">
-        <div class="transactionlogos">
-            <i class="fa-solid fa-paper-plane"></i>
-        </div>            
-        <div>
-            <h4>Received Money</h4>
-        </div>
-        </div>            
-        <h3 class="amount">$765.24</h3>
-    </div> 
-            </div>
+    
 
 
     <!-- PAYMENT SCHEDULE -->
@@ -309,6 +232,60 @@
     </section>
     </section> 
 
-  
+
+    <!-- TRANSFER POP
+    
+    <section class="transfer-container hidden">
+        <div class="trcontain-balance">
+            <h4>Available Balance</h4>
+            <h1>$20,000.00</h1>
+        </div>
+
+        <div class="recipient-details">
+            <div class="bankselection gap">
+                <h3>Select Bank</h3>
+                <div class="banklist">
+                    <select name="" id="">
+                        <Option>Zenith Bank</Option>
+                        <Option>Access  Bank</Option>
+                        <Option>Guaranty Trust Bank (GTBank)</Option>
+                        <Option>First Bank of Nigeria</Option>
+                        <Option>United Bank for Africa (UBA)</Option>
+                        <Option>OPay</Option>
+                        <Option>Moniepoint</Option>
+                        <Option>PalmPay</Option>
+                        <Option>Kuda Bank</Option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="accountinput gap">
+                <label for="accountnumber">Account Number</label>
+                <input type="tel" id="accountnumber" required>
+            </div>
+
+            <div>
+                Account Verified
+                
+            </div>
+
+            <div>
+                <h3>Transfer Amount</h3>
+                <input type="tel" required>
+            </div>
+
+            <div>
+                <h3>Description (Optional)</h3>
+                <input type="text">
+            </div>
+
+        </div>
+        
+        <button type="submit">Send</button>
+        <button type="button">Cancel</button>
+        <button type="reset">Clear</button>
+
+    </section> -->
+
 </body>
 </html>

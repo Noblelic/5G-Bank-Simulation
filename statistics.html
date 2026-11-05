@@ -4,19 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="chart" href="statistics.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="statistics.css">
+     <script src="https://kit.fontawesome.com/a8ea92a19a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="dashboard.css">
+    
 </head>
 <body>
     
+<section class="main">
+
+
+    <!-- SIDE BAR -->
+    <aside>
+    <img src="assests/logo.png" alt="">
+    <ul>
+        <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+        <li><a href="transactions.html"><i class="fa-solid fa-right-left"></i> Transactions</a></li>
+        <li><a href="statistics.html"><i class="fa-solid fa-chart-simple"></i> Analytics</a></li>
+        <li><a href="cards.html"><i class="fa-solid fa-credit-card"></i> Cards</a></li>
+        <li><a href=""><i class="fa-solid fa-vault"></i> Savings</a></li>
+        <li><a href=""><i class="fa-solid fa-gear"></i> Settings</a></li>
+        <li><a href=""><i class="fa-solid fa-circle-question"></i> Help</a></li>
+    </ul>
+    <hr>
+    <div class="Logout">
+        <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </div>
+    </aside>
+
+
+
+
+    <div class="statsmain">
+        <h1>Statistics</h1>
     <div class="chartcontainer">
         <div class="chart" id="barchart">
-            <canvas id="myChart" width="300" height="300"></canvas>
+            <canvas id="myChart" width="300" height="560"></canvas>
         </div>
     </div>
-  
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="statistics.js"></script>
-
+</section>
     
 </body>
 </html>
