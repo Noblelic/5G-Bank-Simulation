@@ -221,3 +221,261 @@ aside img {
     border: none;
     outline: none;
 }
+
+.main,
+.transactionContainer,
+.transaction-header,
+.boardheadlines,
+.transactionlist,
+.movements {
+    min-width: 0;
+}
+
+.transactionContainer {
+    padding: 30px clamp(16px, 4vw, 55px);
+}
+
+.transaction-header input[type="search"] {
+    max-width: 100%;
+    padding: 10px 12px;
+}
+
+.transactionfeatures {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px 0;
+}
+
+.dropdown select {
+    max-width: 100%;
+}
+
+.listheadlines,
+.transactionlist {
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+.movements {
+    display: grid;
+    grid-template-columns: minmax(130px, 1.2fr) minmax(110px, 1fr) minmax(120px, 1.2fr) minmax(110px, 1fr) minmax(100px, 0.9fr) minmax(80px, 0.7fr);
+    gap: 12px;
+}
+
+.movements > div {
+    min-width: 0;
+}
+
+#id p {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 1050px) {
+    .main {
+        grid-template-columns: 10rem minmax(0, 1fr);
+        gap: 14px;
+        padding: 8px;
+    }
+
+    .transactionContainer {
+        padding: 24px 16px;
+    }
+
+    .boardheadlines {
+        display: none;
+    }
+
+    .transactionlist {
+        gap: 12px;
+        padding: 12px 0;
+    }
+
+    .movements {
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+            "type amount"
+            "date status"
+            "id details";
+        gap: 10px 16px;
+        padding: 14px;
+        border: 1px solid var(--border);
+        border-radius: 1rem;
+        background: var(--white);
+    }
+
+    .movements > #type {
+        grid-area: type;
+    }
+
+    .movements > #date {
+        grid-area: date;
+    }
+
+    .movements > #id {
+        grid-area: id;
+        overflow-wrap: anywhere;
+    }
+
+    .movements > #amount {
+        grid-area: amount;
+        text-align: right;
+    }
+
+    .movements > [id^="status-"] {
+        grid-area: status;
+        justify-self: end;
+        align-self: center;
+    }
+
+    .movements > #details {
+        grid-area: details;
+        justify-self: end;
+    }
+
+    .movements > #date::before,
+    .movements > #id::before {
+        display: block;
+        color: #64748b;
+        font-size: 0.75rem;
+    }
+
+    .movements > #date::before {
+        content: "Date";
+    }
+
+    .movements > #id::before {
+        content: "ID";
+    }
+}
+
+@media (max-width: 760px) {
+    .main {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    aside {
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        gap: 12px;
+        justify-content: stretch;
+        padding: 10px;
+    }
+
+    aside img {
+        width: 64px;
+        height: auto;
+    }
+
+    aside ul {
+        display: flex;
+        min-width: 0;
+        gap: 4px;
+        overflow-x: auto;
+    }
+
+    aside ul li {
+        flex: 0 0 auto;
+    }
+
+    aside ul li a {
+        padding: 8px;
+        white-space: nowrap;
+    }
+
+    aside hr {
+        display: none;
+    }
+
+    .transactionContainer {
+        padding: 16px 8px;
+    }
+
+    .transactionfeatures {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 560px) {
+    .main {
+        gap: 10px;
+        padding: 6px;
+    }
+
+    aside {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: stretch;
+    }
+
+    aside img,
+    aside .Logout {
+        display: none;
+    }
+
+    .transactionContainer {
+        padding: 12px 4px;
+    }
+
+    .navrow {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .navrow:nth-child(2) {
+        flex-direction: column;
+    }
+
+    .navrow:nth-child(2) > div {
+        display: flex;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .navrow input[type="search"] {
+        width: 100%;
+    }
+
+    .navrow button {
+        flex: 1;
+        min-width: 0;
+        padding: 8px;
+    }
+
+    #navright {
+        gap: 12px;
+        font-size: 20px;
+    }
+
+    .navprofile {
+        width: 38px;
+        height: 38px;
+        flex: 0 0 auto;
+    }
+
+    .transactionfeatures {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .dropdown select {
+        width: 100%;
+    }
+
+    .movements {
+        gap: 8px 10px;
+        padding: 12px;
+    }
+
+    .movements h3,
+    .movements h4,
+    .movements p {
+        font-size: 0.9rem;
+    }
+
+    #type {
+        gap: 8px;
+    }
+
+    #details button {
+        padding: 8px 10px;
+    }
+}
