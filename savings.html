@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5G Bank | Savings Vault</title>
+    <link rel="stylesheet" href="savings.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-content">
+            <div class="brand">
+                <strong>5G BANK</strong>
+                <span>| Savings Vault</span>
+            </div>
+
+            <div class="profile">
+                <span>●</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN BACKGROUND -->
+    <main class="savings-page">
+
+        <section class="dashboard">
+
+            <h3 class="page-title">My Savings Goals</h3>
+
+            <!-- LUXURY VAULT CARD -->
+            <div class="vault-card">
+
+                <div class="vault-circle"></div>
+
+                <div class="vault-top">
+                    <span>Luxury Vault</span>
+
+                    <div class="vault-mastercard">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="vault-bottom">
+                    <div>
+                        <small>Balance</small>
+                        <h2>$15,250.75</h2>
+                    </div>
+
+                    <div class="vault-logo">
+                        <h2>5G</h2>
+                        <small>BANK</small>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- DASHBOARD GRID -->
+            <div class="savings-grid">
+
+                <!-- EMERGENCY FUND -->
+                <div class="saving-card">
+
+                    <div class="goal-header">
+                        <div class="goal-icon shield">♥</div>
+                        <h4>Emergency Fund</h4>
+                    </div>
+
+                    <div class="goal-amounts">
+                        <span>Goal: $10,000</span>
+                        <span>Saved: $6,500</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress emergency"></div>
+                    </div>
+
+                    <div class="progress-text">
+                        <span>Progress: 65%</span>
+                    </div>
+
+                </div>
+
+                <!-- TOKYO VACATION -->
+                <div class="saving-card">
+
+                    <div class="goal-header">
+                        <div class="goal-icon airplane">✈</div>
+                        <h4>Tokyo Vacation</h4>
+                    </div>
+
+                    <div class="goal-amounts">
+                        <span>Goal: $5,000</span>
+                        <span>Saved: $1,200</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress vacation"></div>
+                    </div>
+
+                    <div class="progress-text">
+                        <span>Progress: 24%</span>
+                    </div>
+
+                </div>
+
+                <!-- SAVINGS TREND -->
+                <div class="saving-card trend-card">
+
+                    <h4>Savings Trend</h4>
+
+                    <div class="chart-container">
+
+                        <div class="chart-values">
+                            <span>$15,250.75</span>
+                            <span>$15,000.00</span>
+                            <span>$10,000.00</span>
+                            <span>$5,000.00</span>
+                            <span>$0.00</span>
+                        </div>
+
+                        <div class="chart">
+                            <svg viewBox="0 0 240 115"
+                                 preserveAspectRatio="none">
+
+                                <defs>
+                                    <linearGradient id="chartFill"
+                                        x1="0" y1="0" x2="0" y2="1">
+
+                                        <stop offset="0%"
+                                            stop-color="#a52e5c"
+                                            stop-opacity=".35"/>
+
+                                        <stop offset="100%"
+                                            stop-color="#a52e5c"
+                                            stop-opacity="0"/>
+
+                                    </linearGradient>
+                                </defs>
+
+                                <!-- GRID LINES -->
+                                <g class="grid-lines">
+                                    <line x1="0" y1="10" x2="240" y2="10"/>
+                                    <line x1="0" y1="35" x2="240" y2="35"/>
+                                    <line x1="0" y1="60" x2="240" y2="60"/>
+                                    <line x1="0" y1="85" x2="240" y2="85"/>
+                                    <line x1="0" y1="110" x2="240" y2="110"/>
+                                </g>
+
+                                <!-- CHART AREA -->
+                                <path class="chart-area"
+                                    d="M0 100
+                                    C25 75 35 75 55 70
+                                    S90 65 115 62
+                                    S145 58 165 45
+                                    S195 20 240 10
+                                    L240 115 L0 115 Z"/>
+
+                                <!-- CHART LINE -->
+                                <path class="chart-line"
+                                    d="M0 100
+                                    C25 75 35 75 55 70
+                                    S90 65 115 62
+                                    S145 58 165 45
+                                    S195 20 240 10"/>
+
+                            </svg>
+
+                            <div class="chart-months">
+                                <span>Jan</span>
+                                <span>Feb</span>
+                                <span>Mar</span>
+                                <span>Apr</span>
+                                <span>May</span>
+                                <span>Jun</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="trend-buttons">
+                        <button class="deposit-btn">
+                            ↓ Deposit to Goal
+                        </button>
+
+                        <button class="transfer-btn">
+                            ⇄ Transfer Funds
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- NEW LAPTOP -->
+                <div class="saving-card">
+
+                    <div class="goal-header">
+                        <div class="goal-icon laptop">▣</div>
+
+                        <h4>New Laptop</h4>
+
+                        <span class="reached">Goal Reached</span>
+                    </div>
+
+                    <div class="goal-amounts">
+                        <span>Goal: $2,500</span>
+                        <span>Saved: $2,500</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress laptop-progress"></div>
+                    </div>
+
+                    <div class="progress-text">
+                        <span>Progress: 100%</span>
+                        <span>Goal Reached</span>
+                    </div>
+
+                </div>
+
+                <!-- RECENT ACTIVITY -->
+                <div class="saving-card activity-card">
+
+                    <h4>Recent Savings Activity</h4>
+
+                    <div class="activity-row">
+                        <span>Weekly Auto-Deposit:</span>
+                        <strong>+$50.00</strong>
+                    </div>
+
+                    <div class="activity-row">
+                        <span>Goal Achievement:</span>
+                        <span>Laptop Vault Reached</span>
+                    </div>
+
+                    <div class="activity-row">
+                        <span>Weekly Auto-Deposit:</span>
+                        <strong>+$50.00</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,471 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fce5c8;
+    color: #21151a;
+}
+
+/* NAVBAR */
+
+.navbar {
+    height: 26px;
+    width: 100%;
+    background: #370b20;
+    color: white;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.nav-content {
+    width: 420px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 10px;
+}
+
+.brand span {
+    color: #e5cbd4;
+}
+
+.profile {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #f0c4d0;
+    color: #52132e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+/* MAIN BACKGROUND */
+
+.savings-page {
+    min-height: calc(100vh - 26px);
+    background: linear-gradient(
+        to bottom,
+        #f2d0c5 0px,
+        #f2d0c5 87px,
+        #fce6ca 87px,
+        #fce6ca 100%
+    );
+    padding: 13px 15px 30px;
+}
+
+.dashboard {
+    width: 420px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.page-title {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* LUXURY VAULT */
+
+.vault-card {
+    width: 140px;
+    height: 80px;
+    margin: 0 auto 12px;
+    padding: 12px 9px;
+
+    position: relative;
+    overflow: hidden;
+    border-radius: 9px;
+
+    color: white;
+
+    background: linear-gradient(
+        115deg,
+        #3c071e,
+        #720d3b,
+        #42091f
+    );
+
+    box-shadow:
+        0 4px 13px rgba(80, 0, 35, 0.5),
+        0 0 15px rgba(180, 39, 94, 0.3);
+}
+
+.vault-circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    right: -65px;
+    top: -30px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.08),
+        rgba(220,45,105,0.25)
+    );
+}
+
+.vault-top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    z-index: 1;
+}
+
+.vault-mastercard {
+    display: flex;
+    align-items: center;
+}
+
+.vault-mastercard span {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #d22a68;
+}
+
+.vault-mastercard span + span {
+    margin-left: -6px;
+    background: #ed6392;
+    opacity: .8;
+}
+
+.vault-bottom {
+    position: absolute;
+    bottom: 9px;
+    left: 9px;
+    right: 9px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.vault-bottom small {
+    display: block;
+    font-size: 7px;
+}
+
+.vault-bottom h2 {
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.vault-logo {
+    text-align: center;
+    line-height: 11px;
+}
+
+.vault-logo h2 {
+    font-size: 17px;
+}
+
+.vault-logo small {
+    font-size: 6px;
+    font-weight: bold;
+}
+
+/* SAVINGS GRID */
+
+.savings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 92px 126px;
+    gap: 12px;
+}
+
+.saving-card {
+    background: #fff;
+    border-radius: 6px;
+    padding: 8px 7px;
+
+    box-shadow: 0 2px 5px rgba(60, 20, 30, 0.12);
+
+    min-width: 0;
+}
+
+/* GOAL HEADER */
+
+.goal-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 9px;
+}
+
+.goal-header h4,
+.saving-card h4 {
+    font-size: 9px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.goal-icon {
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f6d8d5;
+    color: #7e1743;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.shield {
+    color: #8a194a;
+}
+
+.airplane {
+    font-size: 15px;
+}
+
+.laptop {
+    font-size: 16px;
+}
+
+/* AMOUNT DETAILS */
+
+.goal-amounts {
+    display: flex;
+    justify-content: space-between;
+    font-size: 8px;
+    margin-bottom: 7px;
+    white-space: nowrap;
+}
+
+/* PROGRESS BAR */
+
+.progress-bar {
+    height: 5px;
+    width: 100%;
+    border-radius: 10px;
+    background: #f1dfca;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.progress {
+    height: 100%;
+    background: #8d2851;
+    border-radius: 10px;
+}
+
+.emergency {
+    width: 65%;
+}
+
+.vacation {
+    width: 24%;
+}
+
+.laptop-progress {
+    width: 100%;
+}
+
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    font-size: 8px;
+}
+
+/* NEW LAPTOP */
+
+.reached {
+    background: #d5f2dc;
+    color: #267442;
+    padding: 3px 5px;
+    border-radius: 8px;
+    font-size: 7px;
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+.saving-card:has(.laptop-progress) .goal-header {
+    margin-bottom: 10px;
+}
+
+/* SAVINGS TREND */
+
+.trend-card {
+    grid-column: 3;
+    grid-row: 1 / 3;
+    padding: 10px;
+}
+
+.trend-card h4 {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.chart-container {
+    height: 115px;
+    display: flex;
+    gap: 5px;
+}
+
+.chart-values {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 6px;
+    color: #555;
+    white-space: nowrap;
+    height: 92px;
+}
+
+.chart {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+}
+
+.chart svg {
+    width: 100%;
+    height: 92px;
+    overflow: visible;
+}
+
+.grid-lines line {
+    stroke: #eadfe0;
+    stroke-width: 0.8;
+}
+
+.chart-area {
+    fill: url(#chartFill);
+}
+
+.chart-line {
+    fill: none;
+    stroke: #8c2450;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.chart-months {
+    display: flex;
+    justify-content: space-between;
+    font-size: 7px;
+    margin-top: 1px;
+    color: #444;
+}
+
+/* TREND BUTTONS */
+
+.trend-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.trend-buttons button {
+    border: none;
+    border-radius: 20px;
+    height: 32px;
+    color: white;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.deposit-btn {
+    background: #420c25;
+}
+
+.transfer-btn {
+    background: #a52d5d;
+}
+
+/* RECENT ACTIVITY */
+
+.activity-card {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 10px 8px;
+}
+
+.activity-card h4 {
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.activity-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+    font-size: 8px;
+    margin-bottom: 9px;
+    white-space: nowrap;
+}
+
+.activity-row strong {
+    color: #27854e;
+    font-weight: 500;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 500px) {
+
+    .dashboard {
+        width: 100%;
+    }
+
+    .nav-content {
+        width: 90%;
+    }
+
+    .savings-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .saving-card {
+        min-height: 100px;
+    }
+
+    .trend-card {
+        grid-column: 1 / 3;
+        grid-row: auto;
+    }
+
+    .activity-card {
+        grid-column: 1 / 3;
+        grid-row: auto;
+    }
+
+    .trend-card .chart-container {
+        height: 140px;
+    }
+
+    .trend-card .chart svg {
+        height: 115px;
+    }
+
+    .trend-card .chart-values {
+        height: 115px;
+    }
+
+}

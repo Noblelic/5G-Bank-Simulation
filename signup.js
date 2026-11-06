@@ -4,7 +4,7 @@
 
 const users = []
 
-   const nameinput = document.getElementById('signupfullname');
+    const nameinput = document.getElementById('signupfullname');
     const emailinput = document.getElementById('email');
     const phoneinput = document.getElementById('phonenumber');
     const countryinput = document.getElementById('country');
@@ -33,7 +33,7 @@ const createAcc = function(Name, Email, Phone, Country, Password, ConfirmPasswor
 signupbutton.addEventListener('click', function(e){
     e.preventDefault()
 
-    if(passwordinput.value === passwordinput2.value &&  nameinput.value !== '' && emailinput.value !== '' && phoneinput.value !== '' && countryinput.value !== '') {
+    if(passwordinput.value === passwordinput2.value  && passwordinput.value !== '' && passwordinput2.value !== '' &&  nameinput.value !== '' && emailinput.value !== '' && phoneinput.value !== '' && countryinput.value !== '') {
         createAcc(nameinput.value, emailinput.value, phoneinput.value, countryinput.value, passwordinput.value, passwordinput2.value)
        window.location.href='login.html'
     }else{
