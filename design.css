@@ -1,0 +1,273 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4d1c0;
+    font-family: Arial, sans-serif;
+}
+
+/* MAIN CARD */
+.card {
+    width: 450px;
+    height: 282px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    padding: 28px;
+    color: white;
+
+    background: linear-gradient(
+        115deg,
+        #450b23 0%,
+        #520b2c 48%,
+        #8d244e 100%
+    );
+
+    border: 2px solid rgba(255, 218, 158, 0.25);
+
+    box-shadow:
+        0 8px 18px rgba(40, 0, 15, 0.35),
+        inset 0 1px 2px rgba(255,255,255,0.2);
+}
+
+/* DECORATIVE CIRCLE */
+.card-circle {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    right: -52px;
+    top: 45px;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        140deg,
+        rgba(255,255,255,0.03),
+        rgba(244, 106, 155, 0.32)
+    );
+
+    pointer-events: none;
+}
+
+/* HEADER */
+.card-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo-box {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #fff4a4,
+        #ffbd17
+    );
+
+    color: #4b1a15;
+    font-size: 14px;
+    font-weight: 900;
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.bank-name {
+    margin-left: 10px;
+}
+
+.bank-name h2 {
+    font-family: Georgia, serif;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+}
+
+.bank-name p {
+    font-size: 9px;
+    font-weight: bold;
+    color: #d8a0a8;
+    letter-spacing: 0.6px;
+    margin-top: 4px;
+}
+
+.wifi {
+    width: 31px;
+    height: 31px;
+    margin-left: auto;
+}
+
+.wifi svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* CHIP */
+.chip {
+    position: absolute;
+    top: 88px;
+    left: 28px;
+
+    width: 44px;
+    height: 32px;
+    border-radius: 5px;
+
+    background: linear-gradient(
+        135deg,
+        #fff4ba,
+        #c99a37,
+        #fff1a0
+    );
+
+    border: 1px solid #d8b55c;
+    overflow: hidden;
+    box-shadow: inset 0 0 4px rgba(90,50,0,0.4);
+}
+
+.chip-line {
+    position: absolute;
+    background: rgba(115, 79, 22, 0.65);
+}
+
+.chip-line.vertical {
+    height: 100%;
+    width: 1px;
+    left: 50%;
+}
+
+.chip-line.horizontal {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+}
+
+.chip-line.middle {
+    width: 1px;
+    height: 100%;
+    left: 25%;
+    box-shadow: 21px 0 rgba(115, 79, 22, 0.65);
+}
+
+/* SHOW DETAILS */
+.show-details {
+    position: absolute;
+    top: 90px;
+    right: 28px;
+
+    padding: 5px 12px;
+    border-radius: 20px;
+
+    background: rgba(65, 9, 37, 0.55);
+    border: 1px solid rgba(255,255,255,0.12);
+
+    color: #f2dce3;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.show-details span {
+    color: #eec34b;
+    margin-right: 4px;
+}
+
+/* CARD NUMBER */
+.card-number {
+    position: absolute;
+    top: 137px;
+    left: 28px;
+    right: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-family: monospace;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.card-number span {
+    letter-spacing: 5px;
+}
+
+.card-number strong {
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+/* CARD INFORMATION */
+.card-info {
+    position: absolute;
+    left: 28px;
+    bottom: 27px;
+    z-index: 2;
+}
+
+.card-info small {
+    display: block;
+    color: #d7a0ad;
+    font-size: 9px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.holder h3 {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.validity {
+    display: flex;
+    gap: 25px;
+}
+
+.validity h4 {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* MASTERCARD */
+.mastercard {
+    position: absolute;
+    right: 27px;
+    bottom: 26px;
+    width: 58px;
+    height: 37px;
+    z-index: 2;
+}
+
+.master-red,
+.master-yellow {
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+}
+
+.master-red {
+    left: 0;
+    background: #eb1747;
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+.master-yellow {
+    right: 0;
+    background: #f5a900;
+    opacity: 0.95;
+}
